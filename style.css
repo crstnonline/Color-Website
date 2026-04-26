@@ -1,0 +1,106 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #111;
+    --box-border: #333;
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #f4f4f4;
+    --box-border: #aaa;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+
+
+#themeToggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    padding: 4px 6px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+
+input, button {
+    padding: 8px;
+    margin: 5px;
+    font-size: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus, button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+
+#colorBox {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 2px solid var(--box-border);
+    background-color: #ffffff;
+    transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+#colorBox:hover {
+    transform: rotate(2deg) scale(1.05);
+}
+
+
+#palette {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    
+}
+
+.palette-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.4s ease;
+    
+}
+
+.color-square {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    transition: transform 0.3s ease;
+}
+
+.color-square:hover {
+    transform: rotate(2deg) scale(1.15);
+}
+
+.copy-btn {
+    margin-top: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(1.02)translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.02) translateY(0);
+    }
+}

@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Christian's Color Selector</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <title>Christian's Color Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <body>
-        <h1>Color Picker & Palette Generator</h1>
+    
+    <button id="themeToggle">🌙</button>
 
-        <div class="container">
-            <!-- Color Input -->
-             <label for="colorPicker">Choose a color:</label>
-             <input type="color" id="colorPicker"> 
+    <h1><i>Christian's Color Tool</i></h1>
 
-             <!-- Hex Input -->
-              <label for="hexInput">Or enter Hex code:</label>
-              <input type="text" id="hexInput" placeholder="#ff0000">
+    <div class="container">
+        <label><b>Select your color:</b></label>
+        <input type="color" id="colorPicker">
 
-            <!-- Display Box -->
-             <div id="colorBox"></div>
+        <label><b>HEX Code:</b></label>
+        <input type="text" id="hexInput" placeholder="#ff0000">
 
-            <!-- Palette -->
-             <h3>Generated Palette:</h3>
-             <div id="palette"></div>
-        </div>
+        <label><b>RGB:</b></label>
+        <input type="number" id="rInput" placeholder="R" min="0" max="255">
+        <input type="number" id="gInput" placeholder="G" min="0" max="255">
+        <input type="number" id="bInput" placeholder="B" min="0" max="255">
 
-        <script src="script.js"></script>
-    </body>
+        <button id="randomBtn"><b><i>Random Color</i></b></button>
+
+        <div id="colorBox"></div>
+
+        <h3><i>Generated Palette:</i></h3>
+        <div id="palette"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <div id="bottomGradient"></div>
+</body>
 </html>
