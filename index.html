@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Christian's Color Selector</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>Color Picker & Palette Generator</h1>
+
+        <div class="container">
+            <!-- Color Input -->
+             <label for="colorPicker">Choose a color:</label>
+             <input type="color" id="colorPicker"> 
+
+             <!-- Hex Input -->
+              <label for="hexInput">Or enter Hex code:</label>
+              <input type="text" id="hexInput" placeholder="#ff0000">
+
+            <!-- Display Box -->
+             <div id="colorBox"></div>
+
+            <!-- Palette -->
+             <h3>Generated Palette:</h3>
+             <div id="palette"></div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
